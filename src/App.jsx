@@ -40,19 +40,19 @@ function App() {
 
   return (
     <>
-      <section className="mx-auto px-5 lg:px-10 max-w-8xl mb-28">
+      <section className="mx-auto mt-16 px-5 lg:px-10 max-w-8xl mb-28">
         <div className="flex flex-col justify-center items-center text-center my-6">
           <h2 className="text-[#150B2B] text-3xl lg:text-4xl font-semibold">
             Our Recipes
           </h2>
-          <p className="my-6 max-w-[800px] font-inter text-[#12132D99]">
+          <p className="my-6 max-w-[800px] text-[#150B2B99]">
             Explore Nova's diverse collection of recipes, crafted to delight
             every palate and elevate your culinary journey.
           </p>
         </div>
 
-        <div className="grid grid-cols-11 gap-4">
-          <div className="col-span-6 grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-4 lg:grid-cols-11 gap-4">
+          <div className="col-span-2 lg:col-span-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
             {recipes.map((recipe) => (
               <Card
                 key={recipe.recipe_id}
@@ -61,17 +61,17 @@ function App() {
               />
             ))}
           </div>
-          <div className="col-span-5">
+          <div className="col-span-2 lg:col-span-5">
             <div className="flex flex-col gap-5 rounded-2xl border-[1px] border-[#28282833] p-5">
-              <h2 className="text-xl font-semibold text-center">
+              <h2 className="text-xl lg:text-2xl font-semibold text-center text-[#282828]">
                 Want to cook: {totalWantToCook > 0
                   ? String(totalWantToCook).padStart(2, "0")
                   : totalWantToCook}
               </h2>
-              <div className="divider"></div>
+              <div className="divider border-[#28282826]"></div>
               {/* table of want to cook start */}
               <div className="max-w-full overflow-x-auto">
-                <table className="table">
+                <table className="table text-[#878787]">
                 
                   <thead>
                     <tr className="text-lg">
@@ -82,7 +82,7 @@ function App() {
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className=" bg-[#28282808]">
                     {/* row of want to cook section */}
                     {wantToCook.map((recipe, i) => {
                       return <WantToCook key={i} index={i} handleAddToCooking={handleAddToCooking} recipe={recipe} />;
@@ -91,15 +91,15 @@ function App() {
                 </table>
               </div>
               {/* table of want to cook ends */}
-              <h2 className="text-xl font-semibold text-center">
+              <h2 className="ttext-xl lg:text-2xl font-semibold text-center text-[#282828]">
                 Currently cooking: {totalCurrentlyCooking > 0
                   ? String(totalCurrentlyCooking).padStart(2, "0")
                   : totalCurrentlyCooking}
               </h2>
-              <div className="divider"></div>
+              <div className="divider border-[#28282826]"></div>
               {/* table of currently cooking start */}
               <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table text-[#282828B3]">
                 
                   <thead>
                     <tr className="text-lg">
@@ -109,12 +109,12 @@ function App() {
                       <th>Calories</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-[#28282808]">
                     {
                       currentlyCooking.map((recipe,i)=><CurrentlyCooking key={i} index={i} recipe={recipe} />)
                     }
 
-                    <tr>
+                    <tr className="text-[#282828CC] font-medium">
                       <th></th>
                       <td></td>
                       <td>Total Time = {totalTime} minutes</td>
