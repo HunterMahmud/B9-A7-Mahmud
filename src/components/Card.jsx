@@ -2,8 +2,8 @@
 function Card({recipe,handleAddToCook}) {
   const {recipe_id, recipe_image, recipe_name,short_description,ingredients,preparing_time, calories} = recipe;
   return (
-    <div className="flex flex-col gap-7 card p-6 bg-base-100 border-[1px] border-[#28282833]">
-      <figure className="">
+    <div className="flex flex-col gap-7 max-w-full overflow-auto card p-6 bg-base-100 border-[1px] border-[#28282833]">
+      <figure className="w-full">
         <img
           src={recipe_image}
           alt="Shoes"

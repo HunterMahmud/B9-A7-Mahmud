@@ -14,11 +14,11 @@
     </style>
   </head>
   <body>
-    <header>
+    <header class="flex flex-col mx-auto">
       <!-- navbar started here -->
       <nav class="flex justify-center items-center">
         <div
-          class="navbar container mx-auto py-7 bg-white max-w-8xl px-0 lg:px-10"
+          class="navbar container mx-auto py-7 bg-white max-w-[1536px] px-0 lg:px-10"
         >
           <div class="navbar-start">
             <div class="dropdown">
@@ -82,7 +82,7 @@
             </ul>
           </div>
           <div class="navbar-end flex gap-3">
-            <label class="input input-bordered rounded-full flex items-center text-[#150B2BB3] font-bold gap-2">
+            <label class="input hidden md:flex input-bordered rounded-full items-center text-[#150B2BB3] font-bold gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" /></svg>
               <input type="text" class="grow" placeholder="Search" />
               
@@ -97,18 +97,18 @@
       <!-- banner start here  -->
       <section class="flex justify-center px-5 lg:px-10">
         <div
-          class="flex flex-col gap-5 lg:gap-8 bg-[linear-gradient(0deg,rgba(21,11,43,0.9),rgba(21,11,43,0)),url('./banner-final.png')] bg-no-repeat bg-cover h-[600px] bg-center w-full  max-w-8xl text-white items-center text-center justify-center rounded-2xl"
+          class="flex flex-col gap-5 lg:gap-8 bg-[linear-gradient(0deg,rgba(21,11,43,0.9),rgba(21,11,43,0)),url('https://i.ibb.co/d5YMn2d/banner-final.png')] bg-no-repeat bg-cover h-[650px] md:h-[600px] bg-center w-full  max-w-[1536px] text-white items-center text-center justify-center rounded-2xl"
         >
           <h1 class="font-extrabold text-6xl">Nova's Kitchen: Elevate Your Cooking with Inspired Recipes!
             </span
             >
           </h1>
           <p
-            class="font-inter hidden lg:block font-normal text-lg max-w-[700px]"
+            class="hidden lg:block font-normal text-lg max-w-[700px]"
           >
           Nova's Kitchen: Elevate Your Culinary Skills with Inspiring Recipes and Delectable Creations. Join Us for a Flavorful Journey!
           </p>
-          <div class="flex gap-4">
+          <div class="flex flex-col md:flex-row gap-4">
             <button class="p-4 rounded-full px-5 border-none bg-[#1DD100] text-xl font-bold">Explore Now</button>
             <button class="border-2 p-4 px-5 rounded-full text-xl font-bold">Our Feedback</button>
           </div>

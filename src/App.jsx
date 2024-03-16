@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <section className="mx-auto mt-16 px-5 lg:px-10 max-w-8xl mb-28">
+      <section className="mx-auto mt-16 px-5 lg:px-10 max-w-[1536px] mb-28">
         <div className="flex flex-col justify-center items-center text-center my-6">
           <h2 className="text-[#150B2B] text-3xl lg:text-4xl font-semibold">
             Our Recipes
@@ -51,8 +51,8 @@ function App() {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 lg:grid-cols-11 gap-4">
-          <div className="col-span-2 lg:col-span-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="md:grid md:grid-cols-4 lg:grid-cols-11 md:gap-4">
+          <div className="col-span-2  md:col-span-2 lg:col-span-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
             {recipes.map((recipe) => (
               <Card
                 key={recipe.recipe_id}
@@ -61,7 +61,7 @@ function App() {
               />
             ))}
           </div>
-          <div className="col-span-2 lg:col-span-5">
+          <div className="col-span-2 lg:col-span-5 mt-6 md:mt-0">
             <div className="flex flex-col gap-5 rounded-2xl border-[1px] border-[#28282833] p-5">
               <h2 className="text-xl lg:text-2xl font-semibold text-center text-[#282828]">
                 Want to cook: {totalWantToCook > 0
