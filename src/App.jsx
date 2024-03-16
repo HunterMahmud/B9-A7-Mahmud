@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import { WantToCook, CurrentlyCooking } from "./components/Cart";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -19,7 +21,7 @@ function App() {
   const handleAddToCook = (id) => {
     const isExist = wantToCook.find((cart) => cart?.recipe_id === id);
     if (isExist) {
-      alert("already added");
+      toast.warn("Item already added.");
     } else {
       const recipe = recipes.find((recipe) => recipe.recipe_id === id);
       setTotalWantToCook(totalWantToCook + 1);
@@ -125,6 +127,7 @@ function App() {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </section>
     </>
   );
