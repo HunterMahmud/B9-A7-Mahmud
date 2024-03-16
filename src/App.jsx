@@ -10,7 +10,8 @@ function App() {
     .then((res)=>res.json())
     .then(data => setRecipes(data))
   },[]);
-// console.log(recipes);
+  const [carts, setCarts] = useState([]);
+  
   return (
     <>
       <section class="mx-auto px-5 lg:px-10 max-w-8xl mb-28">

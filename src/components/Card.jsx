@@ -34,7 +34,7 @@ function Card({recipe}) {
             </div>
         </div>
         <div className="card-actions flex">
-          <button className="btn bg-[#1DD100] rounded-full p-4 px-5 text-xl flex  content-center">Want to Cook</button>
+          <button onClick={()=> alert("hello")} className="btn bg-[#1DD100] rounded-full p-4 px-5 text-xl flex  content-center">Want to Cook</button>
         </div>
       </div>
     </div>
